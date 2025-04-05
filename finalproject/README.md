@@ -1,91 +1,167 @@
+# Animal Detection System
 
+## 1. Overview
 
-This repository contains the implementation of an animal detection system using transfer learning on YOLO (You Only Look Once) which trained on the COCO (Common Objects in Context) dataset. The goal of this project is to develop an accurate animal detection model by leveraging the knowledge learned from a pre-trained YOLO model on a large-scale dataset.
+The Animal Detection project is an AI-powered system designed to detect and identify animals in real-time using images or video feeds. This solution assists wildlife monitoring, ensures safety in human-animal conflict areas, and contributes to research and education. 
 
-## Description
+The system uses the YOLOv8 model for precise and fast detection of animals in images. It provides an easy-to-use web interface developed using React, HTML, and CSS for a smooth user experience. When an image or video is uploaded, the backend processes it with the YOLOv8 model to identify animal types and their locations, returning the results for visualization on the frontend.
 
-Human activities have significantly altered large areas of the Earth's surface, resulting in the disruption of natural habitats and the behaviors of animal species. This has led to the disappearance of many wild species from the face of the earth, while others have been forced to migrate to new areas, causing the destruction of natural resources and impacting both the environment and human livelihoods.
+This model is trained on the COCO128 dataset, allowing it to detect multiple common animals effectively. The system can be integrated with CCTV cameras for continuous surveillance and monitoring, making it practical for real-world applications. It supports fields like conservation, research, education, and safety. 
 
-In this report, we aim to explore the potential of machine learning (ML) algorithms for animal detection and analyze different approaches to assess their effectiveness. We will delve into the application of ML in detecting and classifying animals, focusing on its relevance and impact in wildlife conservation, agriculture, and urban planning.
+This project offers an automated, scalable solution that reduces the need for constant human monitoring and provides reliable animal detection at any time.
 
-Our animal detection project aims to develop a robust and accurate system that can automatically detect and classify various animal species in images or videos. By leveraging advanced computer vision techniques, machine learning algorithms, and large-scale datasets, we strive to create a reliable solution that can assist in wildlife conservation efforts, animal monitoring, and research initiatives.
+---
 
-The primary objective of this project is to utilize state-of-the-art object detection models, such as YOLO (You Only Look Once), to identify animals in their natural habitats or controlled environments. By employing deep learning techniques, we can train models to recognize specific animal categories and provide precise bounding box coordinates for their locations within the images.
+## 2. Scope
+
+This project has a wide range of applications in the real world, including:
+
+- **Wildlife Conservation:** Identifies and tracks animals in their natural habitats to study movement and behavior.
+- **Security & Safety:** Detects animals near residential or restricted areas to prevent accidents or human-animal conflicts.
+- **Zoo and Sanctuary Monitoring:** Automates observation of animals in captivity.
+- **Education & Research:** Assists students and researchers in studying animal presence and behavior.
+
+---
+
+## Why Did We Choose This Project?
+
+We chose this project to develop an efficient and accurate animal detection system using deep learning. By leveraging YOLOv8, the model can quickly and precisely identify animals in images, useful for wildlife monitoring, security surveillance, and conservation efforts.
+
+React for the frontend and YOLOv8 for the backend ensures a seamless experience for users to upload and analyze images.
+
+---
+
+## Technologies Used and Why
+
+### Frontend (React.js, HTML, CSS)
+
+- **React.js**: Enables dynamic and interactive UI using reusable components.
+- **HTML**: Provides structure to the web pages.
+- **CSS**: Styles HTML elements and controls layout and appearance.
+
+### Backend (Python)
+
+- **Python**: Used to train the YOLOv8 model using the Ultralytics library and to export it to TensorFlow.js format for browser-based use.
+
+### Deep Learning (TensorFlow.js, YOLOv8)
+
+- **YOLOv8**: A state-of-the-art object detection model known for real-time performance.
+- **TensorFlow.js**: Runs the trained model directly in the browser, minimizing server load and latency. Also handles post-processing like Non-Max Suppression.
+
+---
+
+## 3. Implementation Steps
+
+### 1. Home Page
+
+The homepage includes:
+- Title: "Animal Image Detection"
+- Key Points: Real-time animal detection, CCTV integration, and user-friendly interface.
+- Visuals: Cartoon-style animal images for user engagement.
+- Navigation: Links to Detection, FAQ, and Contact pages.
+- Footer: Project summary and purpose.
+
+### 2. Detection Page
+
+Core functionality to detect animals:
+- Upload image
+- Upload video
+- Open live camera
+- Drag-and-drop support
+
+Displays processed images/videos with bounding boxes and accuracy labels.
+
+### 3. FAQ Page
+
+Contains answers to common queries related to the project objectives, technology stack, and use cases.
+
+### 4. Contact Us Page
+
+Users can submit their name, email, and a message. Shows confirmation upon successful submission.
+
+### 5. Future Enhancements
+
+- Audio-based animal detection
+- Multilingual support
+- Species-level classification
+
+---
+
+## 6. Advantages
+
+- **High Accuracy and Speed:** YOLOv8 ensures fast, real-time results.
+- **Multi-Animal Detection:** Detects multiple animals at once.
+- **Wildlife Conservation:** Helps track and monitor wildlife.
+- **User-Friendly:** Easy upload and detection process.
+
+---
 
 ## Dataset
 
 Our dataset consists of a diverse collection of images showcasing various animals. The YOLO model used in this project has been pretrained on this dataset, enabling it to detect and classify different animal categories. The animals included in our dataset are:
-  * Bird
-  * Cat
-  * Dog
-  * Horse
-  * Sheep
-  * Cow
-  * Elephant
-  * Bear
-  * Zebra
-  * Giraffe
+
+- Bird  
+- Cat  
+- Dog  
+- Horse  
+- Sheep  
+- Cow  
+- Elephant  
+- Bear  
+- Zebra  
+- Giraffe  
+
+---
 
 ## Transfer Learning with YOLO
 
 Transfer learning is a technique that enables leveraging the knowledge learned from a pre-trained model and applying it to a new task or dataset. In this project, we utilize transfer learning with a pre-trained YOLO model on the COCO dataset. By utilizing the pre-trained weights, we can accelerate the training process and enhance the performance of the animal detection model.
 
-# Dependencies
+---
 
-* [TensorFlow.js](https://www.tensorflow.org/js)
-* [Keras](https://keras.io/)
-* [npm](https://www.npmjs.com/)
-* [React.js](https://reactjs.org/)
+## Dependencies
 
-# Installation
+- [TensorFlow.js](https://www.tensorflow.org/js)  
+- [Keras](https://keras.io/)  
+- [npm](https://www.npmjs.com/)  
+- [React.js](https://reactjs.org/)  
+
+---
+
+## Installation
 
 ### Prerequisites
 
-Install Node.js and npm using the link above. Follow instructions on their respective websites. Npm is included with Node.js
+Install Node.js and npm using the link above. Npm is included with Node.js.
 
 ### Instructions
 
-Clone the repository
+Clone the repository:
+
 ```bash
 git clone https://github.com/praveenaso/gdsc.git
-
 ```
 
-Install all the dependencies
+Install all dependencies:
+
 ```bash
-cd WildEye
+cd finalproject
+cd Animaldetection
 npm install
 ```
 
-# Usage
+---
 
-Run the project
+## Usage
+
+Run the project:
+
 ```bash
-cd WildEye
 npm start
 ```
 
-Open a web browser and go to
-```bash
-http://localhost:3000/WildGuard
-```
-
-## License
-
-This project is licensed under the MIT License. Feel free to modify and distribute it according to the terms of the license.
+---
 
 ## Acknowledgements
 
-We would like to acknowledge the creators of the COCO dataset and the YOLO algorithm for their valuable contributions to the field of object detection. Their work has been instrumental in making this project possible.
-
-## Contact
-
-For any inquiries or questions, please feel free to contact.
-
-Enjoy exploring the world of animal detection using YOLO on the COCO dataset!
-
-## License
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-[MIT License Link](https://github.com/praveenaso/gdsc/blob/main/LICENSE)
+We would like to acknowledge the creators of the **COCO dataset** and the **YOLO algorithm** for their valuable contributions to the field of object detection. Their work has been instrumental in making this project possible.

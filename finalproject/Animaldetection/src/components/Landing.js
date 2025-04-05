@@ -106,7 +106,7 @@ const SimpleAnimalDetection = () => {
             <li style={navItemStyle}><a href="#home" style={navLinkStyle}>Home</a></li>
             <li style={navItemStyle}><a href="#detection" style={navLinkStyle}>Detection</a></li>
             <li style={navItemStyle}><a href="#faq" style={navLinkStyle}>FAQ</a></li>
-            <li style={navItemStyle}><a href="#about" style={navLinkStyle}>Contact Us</a></li>
+            <li style={navItemStyle}><a href="#about" style={navLinkStyle}>Contact us..</a></li>
           </ul>
         </nav>
       </header>

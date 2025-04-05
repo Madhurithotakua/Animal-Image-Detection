@@ -1,6 +1,6 @@
 {
-  "homepage": "http://shreehari-revankar.github.io/WildGuard",
-  "name": "WildGuard",
+  "homepage": "https://github.com/KIET-2025-BATCH/KW-AID-DS-T15.git",
+  "name": "Animal Image Detection",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
