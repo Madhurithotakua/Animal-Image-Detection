@@ -139,7 +139,7 @@ Install Node.js and npm using the link above. Npm is included with Node.js.
 Clone the repository:
 
 ```bash
-git clone https://github.com/praveenaso/gdsc.git
+git clone https://github.com/Madhurithotakua/Animal-Image-Detection.git
 ```
 
 Install all dependencies:
